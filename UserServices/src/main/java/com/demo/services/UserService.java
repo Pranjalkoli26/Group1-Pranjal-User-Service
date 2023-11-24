@@ -46,7 +46,7 @@ public class UserService {
 				&& dto.getUsername().equals(existingUser.getUsername())) {
 			return new ResponseEntity<>("user exist", HttpStatus.OK);
 		} else {
-			throw new WrongCredentialsExceptions("give correct username and password matching with input id");
+			throw new WrongCredentialsException("give correct username and password matching with input id");
 		}
 
 	}
